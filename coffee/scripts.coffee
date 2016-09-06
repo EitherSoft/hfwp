@@ -4,6 +4,7 @@ $(document).ready ->
     svg4everybody()
     asyncLoadImg('data-img')
     asyncLoadBg('data-bg')
+    asyncLoadSvg('data-svg')
     return
 
 $(window).load ->
@@ -58,5 +59,24 @@ asyncLoadBg = (attr) ->
         $src = $image.getAttribute(attribute)
         $image.style.backgroundImage = 'url(\'' + $src + '\')'
         $image.removeAttribute attribute
+        return
+    return
+
+asyncLoadSvg = (attr) ->
+    attribute = attr
+    $images = window.document.querySelectorAll('[' + attribute + ']')
+    $src = ''
+    if $images.length == undefined
+        $images = [$images]
+    [].forEach.call $images, ($image) ->
+        $src = $image.getAttribute(attribute)
+        jQuery.get $src, ((data) ->
+            $svg = jQuery(data).find('svg')
+            $svg = $svg.removeAttr('xmlns:a')
+            if !$svg.attr('viewBox') and $svg.attr('height') and $svg.attr('width')
+                $svg.attr 'viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width')
+            $($image).replaceWith $svg
+            return
+        ), 'xml'
         return
     return
