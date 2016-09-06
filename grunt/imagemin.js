@@ -1,7 +1,7 @@
 module.exports = {
     images: {
         options: {
-            optimizationLevel: 9
+            optimizationLevel: 3
         },
         files: [{
             expand: true,

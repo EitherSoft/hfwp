@@ -13,8 +13,6 @@
         "bootstrap-select": "^1.7",
         "awesome-bootstrap-checkbox": "^0.3.4",
         "bootstrap-datepicker": "^1.4",
-        "svg4everybody": "latest",
-        "fullpage.js": "~2.7.5",
-        "typed.js": "~1"
+        "svg4everybody": "latest"
     }
 }
