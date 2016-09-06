@@ -1,0 +1,14 @@
+- $og = getOpengraphData();
+- if(sizeof($og) > 0):
+meta(property='og:title', content!='<?php print $og["title"]; ?>')
+meta(property='og:description', content!='<?php print $og["description"]; ?>')
+meta(property='og:type', content!='article')
+meta(property='og:url', content!='<?php print $og["url"]; ?>')
+meta(property='og:site_name', content!='<?php print $og["site_name"]; ?>')
+meta(property='og:image', content!='<?php print $og["image"]; ?>')
+meta(name='twitter:card', content='summary')
+meta(name='twitter:title', content!='<?php print $og["title"]; ?>')
+meta(name='twitter:description', content!='<?php print $og["description"]; ?>')
+meta(name='twitter:image', content!='<?php print $og["image"]; ?>')
+meta(name='twitter:url', content!='<?php print $og["url"]; ?>')
+- endif;

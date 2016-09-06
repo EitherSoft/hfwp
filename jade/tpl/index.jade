@@ -1,0 +1,12 @@
+doctype html
+html
+    - global $themename, $wpdb, $themeOptions, $shortname;
+    head
+        - get_header();
+    body
+        .svg-container
+            include /svg.html
+        include /mixins/layout/header.jade
+        include /mixins/layout/section-content.jade
+        include /mixins/layout/footer.jade
+        - get_footer();

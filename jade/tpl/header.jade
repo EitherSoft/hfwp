@@ -1,0 +1,11 @@
+title
+    - wp_title( '|', true, 'right' );
+meta(charset="utf-8")
+meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0")
+link(rel="shortcut icon", href!="<?php echo get_template_directory_uri(); ?>/assets/img/"+favicon)
+link(href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&subset=cyrillic", rel="stylesheet")
+- global $themeOptions, $shortname;
+- wp_head();
+- print trim(str_replace(array("\'", '\"'), "'",preg_replace('/\s\s+/','',$themeOptions[$shortname.'_ga'])));
+include /mixins/functions/og.jade

@@ -1,0 +1,10 @@
+/.idea
+/node_modules
+/bower_components
+/compiled-js
+/compiled-css
+/jade/svg.html
+/jade/clock-back.html
+/jade/clock-front.html
+/files/svg-final
+npm-debug.log

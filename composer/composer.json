@@ -1,0 +1,77 @@
+{
+    "name": "hfwp",
+    "description": "Human face wordpress build",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "redink-no/wpkit",
+                "version": "master",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/redink-no/wpkit.git",
+                    "reference": "master"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "EitherSoft/jadeWP",
+                "version": "master",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/EitherSoft/jadeWP.git",
+                    "reference": "master"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "jonnSmith/btforms",
+                "version": "master",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/jonnSmith/btforms.git",
+                    "reference": "master"
+                }
+            }
+        },
+        {
+            "type": "composer",
+            "url": "https://wpackagist.org"
+        }
+    ],
+    "require": {
+        "php": ">=5.5",
+        "composer/installers": "~1.0",
+        "johnpbloch/wordpress": "*",
+        "redink-no/wpkit": "master",
+        "jonnSmith/jadeWP": "master",
+        "jonnSmith/btforms": "master",
+        "aws/aws-sdk-php": "*",
+        "rarst/laps": "*",
+        "wpackagist-plugin/rus-to-lat-advanced": "*",
+        "wpackagist-plugin/all-in-one-seo-pack": "*",
+        "wpackagist-plugin/disable-site": "*",
+        "wpackagist-plugin/w3-total-cache": "*",
+        "wpackagist-plugin/google-sitemap-generator": "*",
+        "wpackagist-plugin/loco-translate": "*",
+        "wpackagist-plugin/easy-image-gallery": "*",
+        "wpackagist-plugin/cw-image-optimizer": "*"
+    },
+    "extra": {
+        "wordpress-install-dir": "public_html",
+        "installer-paths": {
+            "public_html/$name": ["package"]
+        }
+    },
+    "autoload": {
+        "psr-0": {
+            "Acme": "src/"
+        }
+    }
+}

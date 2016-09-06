@@ -1,0 +1,79 @@
+bordered-button(btn-color,btn-background)
+    border 3px solid btn-color
+    border-radius 0
+    background btn-background
+    color btn-color
+    text-transform uppercase
+    font-weight 600
+    cursor pointer
+    padding 2px 10px
+
+for $clase, $color in palette
+    .bg-{$clase}
+        background-color: $color
+    .color-{$clase}
+        color: $color
+
+
+no-select()
+    -webkit-touch-callout none
+    -webkit-user-select none
+    -khtml-user-select none
+    -moz-user-select none
+    -ms-user-select none
+    user-select none
+
+center()
+    display flex
+    align-items center
+    justify-content center
+
+section-title()
+    font-weight 100
+    text-transform uppercase
+    letter-spacing 4px
+
+section-title-center()
+    text-align center
+
+@keyframes zoom
+    0%
+        transform: scale(1)
+    100%
+        transform: scale(1.5)
+
+
+@keyframes blink
+    0%
+        opacity 1
+    50%
+        opacity 0.3
+    100%
+        opacity 1
+
+
+file(name, ext, path)
+    path + '/' + name + '.' + ext
+
+font-face(family, font=family, path='fonts', weight='normal', style='normal')
+    @font-face
+        font-family family
+        src url(file(font, 'eot', path))
+        src url(file(font, 'eot?#iefix', path)) format("embedded-opentype"),
+        url(file(font, 'woff', path)) format("woff"),
+        url(file(font, 'ttf', path)) format("truetype"),
+        url(file(font, 'svg#' + family, path)) format("svg")
+        font-weight weight
+        font-style style
+
+font-face-inline(family, font=family, path='fonts', weight=400, style='normal')
+    @font-face
+        font-family family
+        src url(file(font, 'eot?', path)) format("embedded-opentype")
+    @font-face
+        font-family family
+        src data-url(file(font, 'woff', path)) format("woff"),
+    data-url(file(font, 'ttf', path)) format("truetype"),
+    url(file(font, 'svg#' + family, path)) format("svg")
+    font-weight weight
+    font-style style
