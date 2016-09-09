@@ -66,7 +66,7 @@ module.exports = {
             {
                 src: "**",
                 dest: "<%= package.base %>public_html/jadeWP",
-                cwd: '<%= package.base %>vendor/EitherSoft/jadeWP',
+                cwd: '<%= package.base %>vendor/jonnSmith/jadeWP',
                 expand: true
             }
         ]

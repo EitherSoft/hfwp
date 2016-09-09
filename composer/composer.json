@@ -19,7 +19,7 @@
         {
             "type": "package",
             "package": {
-                "name": "EitherSoft/jadeWP",
+                "name": "jonnSmith/jadeWP",
                 "version": "master",
                 "source": {
                     "type": "git",
